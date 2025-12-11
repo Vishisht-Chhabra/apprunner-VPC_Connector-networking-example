@@ -20,6 +20,18 @@ app.get('/ip/:ipAddress', async (req, res) => {
   }
 });
 
+app.get('/ip-https/:ipAddress', async (req, res) => {
+  const ipAddress = req.params.ipAddress;
+
+  try {
+    const response = await axios.get(`https://ipinfo.io/${ipAddress}`);
+    res.json(response.data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error fetching IP information via HTTPS');
+  }
+});
+
 app.get('/curl-ec2/:privateIp', (req, res) => {
   const privateIp = req.params.privateIp;
 
