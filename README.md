@@ -130,13 +130,13 @@ For manual configuration or troubleshooting, refer to [ec2-nginx-deploy.md](./ec
 6. Wait for the connector status to become **Active** (takes 2-3 minutes)
 
 #### 3.2 Prepare GitHub Repository
-This tutorial uses the Node.js application in this repository, which includes an `apprunner.yaml` configuration file. Since AppRunner only supports source code deployments from GitHub:
+This tutorial uses the Node.js application in this repository, which includes an `apprunner.yaml` configuration file. Since AppRunner only supports source code deployments from GitHub and BitBucket:
 
 1. **Fork this repository** to your GitHub account
 2. Ensure the repository is **public** or set up GitHub connection for private repos
 3. Note your GitHub repository URL: `https://github.com/your-username/repository-name`
 
-**Important**: AppRunner source code deployments only work with GitHub repositories. Other git providers or S3 are not supported for source code deployments.
+**Important**: AppRunner source code deployments only work with GitHub and BitBucket repositories. Other git providers or S3 are not supported for source code deployments.
 
 #### 3.3 Create AppRunner Service
 1. In **App Runner Console**, click **Create service**
